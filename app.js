@@ -32,7 +32,8 @@ const fetchJsonData = (dispatch, options) =>
 
 const loader = (searchWord) => [
   fetchJsonData, {
-    url: `http://fip.zaiste.net/projects?q=${searchWord}`,
+    url: "projects.json",
+    // url: `http://fip.zaiste.net/projects?q=${searchWord}`, // disabled to test gh pages deployment (domain not secure) 
     onresponse: GotProjects
   }
 ]
